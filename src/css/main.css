@@ -1,0 +1,166 @@
+.hero__container, .hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  outline: none;
+  border: none;
+  color: inherit;
+}
+
+body {
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+img {
+  width: 100%;
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  min-width: 320px;
+}
+
+.button {
+  display: block;
+  padding: 12px 15px;
+  border-radius: 25px;
+}
+
+.header {
+  position: relative;
+}
+
+.header__container {
+  position: absolute;
+  width: 185px;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.authorization {
+  display: flex;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+}
+
+@media (max-width: 767px) {
+  .authorization {
+    margin-bottom: 110px;
+  }
+}
+.authorisation__link {
+  display: block;
+  padding: 10px 15px;
+  border-radius: 25px;
+}
+.authorisation__link:hover {
+  background-color: #ffffff;
+  color: #333;
+}
+
+.authorisation__link--active {
+  border: 2px solid #ffffff;
+}
+
+.logo {
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .header__container {
+    width: 670px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1400px) {
+  .header__container {
+    width: 940px;
+  }
+}
+.hero {
+  background-image: url(/src/img/hero/background.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  padding-top: 200px;
+}
+
+.hero__container {
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.hero__title {
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.hero__text {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.hero__button {
+  background-color: #ff4e50;
+}
+.hero__button:hover {
+  color: #ff4e50;
+  background-color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .hero__container {
+    gap: 35px;
+  }
+  .hero__title {
+    font-size: 52px;
+  }
+  .hero__text {
+    font-size: 24px;
+  }
+}

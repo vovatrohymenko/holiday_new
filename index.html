@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@300&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="/src/css/main.css" />
   </head>
   <body>
     <header class="header">
@@ -19,7 +20,9 @@
             <a href="#" class="authorisation__link">Log in</a>
           </li>
           <li class="authorization__item">
-            <a href="#" class="authorisation__link">Sign up</a>
+            <a href="#" class="authorisation__link authorisation__link--active"
+              >Sign up</a
+            >
           </li>
         </ul>
         <h1 class="logo header__logo">URLAUBSGLÜCK</h1>
@@ -27,9 +30,11 @@
     </header>
     <main class="main-page">
       <section class="hero main-page__hero">
-        <h2 class="hero__title">Share your holiday dreams</h2>
-        <p class="hero__text">And find the perfect partner to fullfill it</p>
-        <a href="#" class="button hero__button">Find your holiday partner</a>
+        <div class="hero__container container">
+          <h2 class="hero__title">Share your holiday dreams</h2>
+          <p class="hero__text">And find the perfect partner to fullfill it</p>
+          <a href="#" class="button hero__button">Find your holiday partner</a>
+        </div>
       </section>
       <section class="partners main-page__partners">
         <div class="conatainer partners__container">
