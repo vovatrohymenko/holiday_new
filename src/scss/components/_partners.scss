@@ -1,5 +1,5 @@
 .partners {
-  padding: 63px 0 55;
+  padding: 63px 0 55px;
 }
 .partners__container {
   padding-inline: 20px;
@@ -8,13 +8,13 @@
   align-items: center;
 }
 .partners__title {
-  font-style: 22px;
+  font-size: 22px;
   text-align: center;
   color: $colorTextSecondary;
   margin-bottom: 15px;
 }
 @media (max-width: 768px) {
-  .partners__items {
+  .partners__item {
     margin-bottom: 30px;
   }
 }
