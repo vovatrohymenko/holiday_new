@@ -1,0 +1,111 @@
+.partners {
+  padding: 63px 0 55;
+}
+.partners__container {
+  padding-inline: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.partners__title {
+  font-style: 22px;
+  text-align: center;
+  color: $colorTextSecondary;
+  margin-bottom: 15px;
+}
+@media (max-width: 768px) {
+  .partners__items {
+    margin-bottom: 30px;
+  }
+}
+.item-partner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 13px;
+}
+.item-partner__foto {
+  position: relative;
+  &::after {
+    content: "";
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: 4px solid $colorTextPrimary;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+$partners: (
+  "bradley": "#ff4e50",
+  "lucas": "#ffa507",
+  "heather": "#1cd7ad",
+  "anna": "#4e73db",
+);
+
+@each $name, $color in $partners {
+  .item-partner__foto--#{$name}::after {
+    background-image: url(../img/partners/#{$name}/icon.svg);
+    background-color: #{$color};
+  }
+}
+
+.item-partner__title {
+  color: $colorTextSecondary;
+  text-align: center;
+}
+.item-partner__text {
+  color: $colorTextTertiary;
+  text-align: center;
+  font-family: $fontFamilySecondary;
+  font-weight: 300;
+}
+.partners__button {
+  color: $colorBtn;
+  text-align: center;
+  border: 2px solid $colorBtn;
+  padding: 12px 60px;
+  &:hover {
+    background-color: $colorBtn;
+    color: $colorTextPrimary;
+  }
+}
+
+@media (min-width: 769px) {
+  .partners {
+    padding: 70px 40px;
+  }
+  .partners__container {
+    padding-inline: 0;
+    max-width: 470px;
+    margin: 0 auto;
+  }
+  .partners__title {
+    margin-bottom: 35px;
+  }
+  .partners__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 40px;
+  }
+  .partners__item {
+    flex-basis: calc((100% - 50px) / 2);
+  }
+}
+@media (min-width: 1440px) {
+  .partners__container {
+    max-width: 914px;
+  }
+  .partners__items {
+    gap: 35px;
+  }
+  .partners__item {
+    flex-basis: calc((100% - 105px) / 4);
+  }
+}

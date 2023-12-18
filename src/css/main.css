@@ -164,3 +164,126 @@ img {
     font-size: 24px;
   }
 }
+.partners {
+  padding: 63px 0 55;
+}
+
+.partners__container {
+  padding-inline: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.partners__title {
+  font-style: 22px;
+  text-align: center;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .partners__items {
+    margin-bottom: 30px;
+  }
+}
+.item-partner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 13px;
+}
+
+.item-partner__foto {
+  position: relative;
+}
+.item-partner__foto::after {
+  content: "";
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: 4px solid #ffffff;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.item-partner__foto--bradley::after {
+  background-image: url(../img/partners/bradley/icon.svg);
+  background-color: #ff4e50;
+}
+
+.item-partner__foto--lucas::after {
+  background-image: url(../img/partners/lucas/icon.svg);
+  background-color: #ffa507;
+}
+
+.item-partner__foto--heather::after {
+  background-image: url(../img/partners/heather/icon.svg);
+  background-color: #1cd7ad;
+}
+
+.item-partner__foto--anna::after {
+  background-image: url(../img/partners/anna/icon.svg);
+  background-color: #4e73db;
+}
+
+.item-partner__title {
+  color: #333;
+  text-align: center;
+}
+
+.item-partner__text {
+  color: #666;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+.partners__button {
+  color: #ff4e50;
+  text-align: center;
+  border: 2px solid #ff4e50;
+  padding: 12px 60px;
+}
+.partners__button:hover {
+  background-color: #ff4e50;
+  color: #ffffff;
+}
+
+@media (min-width: 769px) {
+  .partners {
+    padding: 70px 40px;
+  }
+  .partners__container {
+    padding-inline: 0;
+    max-width: 470px;
+    margin: 0 auto;
+  }
+  .partners__title {
+    margin-bottom: 35px;
+  }
+  .partners__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 40px;
+  }
+  .partners__item {
+    flex-basis: calc((100% - 50px) / 2);
+  }
+}
+@media (min-width: 1440px) {
+  .partners__container {
+    max-width: 914px;
+  }
+  .partners__items {
+    gap: 35px;
+  }
+  .partners__item {
+    flex-basis: calc((100% - 105px) / 4);
+  }
+}
