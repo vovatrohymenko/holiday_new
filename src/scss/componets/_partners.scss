@@ -1,0 +1,112 @@
+.partners {
+  padding: 60px 0 55px;
+}
+.partners__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.partners__title {
+  text-align: center;
+  font-size: 22px;
+  color: $colorTextSecondary;
+  margin-bottom: 15px;
+}
+
+.partners__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+.partner {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+.partner__photo {
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 35px;
+    height: 35px;
+    bottom: 0;
+    right: 0;
+    border: 4px solid $colorTextPrimary;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+$partners: (
+  "bradley": "#FF4E50",
+  "lucas": "#FFA507",
+  "heather": "#1CD7AD",
+  "anna": "#4E73DB",
+);
+@each $name, $color in $partners {
+  .partner__photo--#{$name}::after {
+    background-color: #{$color};
+    background-image: url(../img/partners/#{$name}/icon.svg);
+  }
+}
+
+.partner__name {
+  color: $colorTextSecondary;
+}
+.partner__text {
+  font-family: $fontSecondary;
+  font-weight: 300;
+  color: $colorTextTertiary;
+  text-align: center;
+}
+
+.partners__button {
+  padding: 12px 60px;
+  background-color: $colorTextPrimary;
+  color: $colorBtn;
+  transition-property: background-color, color;
+  transition: 0.5s ease;
+  &:hover {
+    background-color: $colorBtn;
+    color: $colorTextPrimary;
+  }
+}
+@media (min-width: 768px) {
+  .partners {
+    padding: 70px 0 40px;
+  }
+  .partners__container {
+    max-width: 500px;
+  }
+  .partners__title {
+    margin-bottom: 30px;
+  }
+  .partners__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    column-gap: 50px;
+    row-gap: 55px;
+    margin-bottom: 40px;
+  }
+  .partners__item {
+    flex-basis: calc((100% - 50px) / 2);
+  }
+}
+
+@media (min-width: 1440px) {
+  .partners__container {
+    max-width: 914px;
+  }
+
+  .partners__list {
+    column-gap: 35px;
+  }
+  .partners__item {
+    flex-basis: calc((100% - 105px) / 4);
+  }
+}

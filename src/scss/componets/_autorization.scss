@@ -1,0 +1,17 @@
+.autorization {
+  display: flex;
+  justify-content: center;
+  column-gap: 5px;
+}
+.autorization__link {
+  display: block;
+  padding: 10px 15px;
+  border-radius: 25px;
+  &:hover {
+    background-color: $colorTextPrimary;
+    color: $colorTextSecondary;
+  }
+}
+.autorization__link--active {
+  border: 2px solid $colorTextPrimary;
+}

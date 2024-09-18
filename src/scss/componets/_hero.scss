@@ -1,0 +1,43 @@
+.hero {
+  background-image: url(../img/hero/background.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  @extend %flex-center;
+}
+.hero__container {
+  @extend %flex-center;
+  flex-direction: column;
+  row-gap: 15px;
+}
+.hero__title {
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.hero__text {
+  text-align: center;
+  font-family: $fontSecondary;
+  font-size: 18px;
+  font-weight: 300;
+}
+.hero__button {
+  background-color: $colorBtn;
+  transition-property: background-color, color;
+  transition: 0.5s ease;
+  &:hover {
+    background-color: $colorTextPrimary;
+    color: $colorBtn;
+  }
+}
+@media (min-width: 768px) {
+  .hero__container {
+    gap: 35px;
+  }
+  .hero__title {
+    font-size: 52px;
+  }
+  .hero__text {
+    font-size: 24px;
+  }
+}

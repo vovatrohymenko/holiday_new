@@ -1,0 +1,11 @@
+.logo {
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .logo {
+    font-size: 20px;
+  }
+}
